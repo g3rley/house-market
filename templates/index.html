@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cálculo de Rentabilidade</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rentabilidade do Imóvel - Alugar ou Comprar?</h1>
+        <form action="/rentability/" method="post">
+            <div class="form-group">
+                <label for="rent_amount">Aluguel Mensal (R$):</label>
+                <input type="text" name="rent_amount" id="rent_amount" required autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="property_purchase_amount">Montante de Compra (R$):</label>
+                <input type="text" name="property_purchase_amount" id="property_purchase_amount" required autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="property_appreciation_rate">Taxa de Valorização Anual (%):</label>
+                <input type="text" name="property_appreciation_rate" id="property_appreciation_rate" required autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="rental_interest_rate">Taxa de Juros do Aluguel Anual (%):</label>
+                <input type="text" name="rental_interest_rate" id="rental_interest_rate" required autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="investment_interest_rate">Taxa de Juros da Aplicação Anual (%):</label>
+                <input type="text" name="investment_interest_rate" id="investment_interest_rate" required autocomplete="off">
+            </div>
+
+            <input type="submit" value="Calcular">
+        </form>
+
+        <div class="result" id="result">
+            <h2>Resultado:</h2>
+            <p id="result_text"></p>
+
+            <!-- Tabela de detalhes do cálculo -->
+            <table id="result_table">
+                <!-- ... (cabeçalho da tabela) ... -->
+            </table>
+
+            <!-- Botão para novo cálculo -->
+            <button id="new_calculation_btn">Novo Cálculo</button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

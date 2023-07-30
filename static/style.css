@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: rgb(24, 28, 35);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #1e2229;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgb(166, 247, 80);
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+.form-group {
+  display: grid;
+  gap: 5px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #2d323d;
+  color: #ffffff;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  background-color: #1e2229;
+  border-color: rgb(166, 247, 80);
+}
+
+input[type="submit"] {
+  background-color: rgb(166, 247, 80);
+  color: #ffffff;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #9effa3;
+}
+
+.result {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #2d323d;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.result.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.result h2 {
+  margin: 0;
+  color: rgb(166, 247, 80);
+}
+
+#result_text {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+#result_table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#result_table th,
+#result_table td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+#result_table th {
+  background-color: #2d323d;
+  color: #ffffff;
+}
+
+#result_table tr:nth-child(even) {
+  background-color: #1e2229;
+}
+
+/* Estilização do botão "Novo Cálculo" */
+#new_calculation_btn {
+  background-color: #4a90e2;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+#new_calculation_btn:hover {
+  background-color: #70a7ff;
+}
